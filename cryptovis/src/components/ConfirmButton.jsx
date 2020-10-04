@@ -1,11 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Context} from '../StateManager'
+import { color3, fontSize1, neonBoxShadow } from './Styles'
 
-const ConfirmButtonStyled = styled.div`
+const ConfirmButton = styled.div`
     margin: 20px;
-    color: green;
+    color: ${color3};
+    ${fontSize1};
+    padding: 5px;
     cursor: pointer;
+    &:hover {
+        ${neonBoxShadow}
+    }
 `
 
 export const CenterDiv = styled.div`
@@ -17,9 +23,9 @@ export default function() {
         <Context.Consumer>
             {({confirmFavourites}) => 
             <CenterDiv>
-                <ConfirmButtonStyled onClick={confirmFavourites}>
+                <ConfirmButton onClick={confirmFavourites}>
                     Confirm Favourites
-                </ConfirmButtonStyled>
+                </ConfirmButton>
             </CenterDiv>
             }
         </Context.Consumer>
