@@ -9,14 +9,18 @@ grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
 grid-gap: 15px;
 margin-top: 40px;
 `
+function getSearchedCoins(coinList, filteredCoins){
+    return filteredCoins && Object.keys(filteredCoins) ||
+        Object.keys(coinList).slice(0,100)
 
-function displayCoins(coinList, favoriteSection, favorites){
-    return favoriteSection ? favorites : Object.keys(coinList).slice(0, favoriteSection ? 10 : 100)
+}
+function displayCoins(coinList, favoriteSection, favorites, filterCoins){
+    return favoriteSection ? favorites : getSearchedCoins(coinList,filterCoins)
 }
 export default function({favoriteSection}) {
     return <Context.Consumer>
-        {({coinList, favorites}) => <CoinGrid>
-            {displayCoins(coinList, favoriteSection, favorites).map(coinKey =>
+        {({coinList, favorites, filteredCoins}) => <CoinGrid>
+            {displayCoins(coinList, favoriteSection, favorites, filteredCoins).map(coinKey =>
                 <CoinTile favoriteSection={favoriteSection} coinKey={coinKey}/>
                 )}
             </CoinGrid>}

@@ -18,7 +18,8 @@ export class StateManager extends React.Component {
             addCoin: this.addCoin,
             removeCoin: this.removeCoin,
             alreadyInFavorites: this.alreadyInFavorites,
-            confirmFavourites: this.confirmFavourites
+            confirmFavourites: this.confirmFavourites,
+            setFilteredCoins: this.setFilteredCoins
 
 
         }
@@ -48,10 +49,31 @@ export class StateManager extends React.Component {
         console.log(coinList.Data)
         this.setState({coinList})
     }
+
+    fetchPrices = async() =>{
+        let prices = await this.prices()
+        console.log(prices)
+        this.setState({prices})
+    }
+
+    prices = async() =>{
+        let returnData = []
+        for(let i =0; i < this.state.favorites.length; i++){
+            try{
+                let priceData = await cc.priceFull(this.state.favorites[i], 'USD')
+                returnData.push(priceData)
+            } catch(e){
+                console.warn('Fetch price error', e)
+            }
+        }
+        return returnData
+    }
     confirmFavourites = () => {
         this.setState({
             firstVisit:false,
             page: 'Dashboard'
+        }, () => {
+            this.fetchPrices()
         })
         localStorage.setItem('cryptoVis', JSON.stringify({
             favorites: this.state.favorites
@@ -67,6 +89,8 @@ export class StateManager extends React.Component {
         return {favorites}
     }
     setPage = page => this.setState({page})
+
+    setFilteredCoins = (filteredCoins) => this.setState({filteredCoins})
 
     render(){
         return(

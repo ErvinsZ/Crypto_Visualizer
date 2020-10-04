@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import {subtleBoxShadow, lightBlueBackground, neonBoxShadow, redBoxShadow} from '../Styles'
+import {subtleBoxShadow, purpleBackground, neonBoxShadow, redBoxShadow} from '../Styles'
 
 export const Tile = styled.div`
 ${subtleBoxShadow};
-${lightBlueBackground};
+${purpleBackground};
 padding: 10px;
 `
 
