@@ -2,12 +2,17 @@ import React from 'react';
 import './App.css';
 import Layout from './Layout'
 import Navbar from './components/Navbar'
+import {StateManager} from './StateManager'
+import Settings from './components/Settings'
 
 function App() {
   return (
     <Layout>
-      <Navbar/>
-      Hello
+      <StateManager>
+        <Navbar/>
+        <Settings/>
+      
+      </StateManager>
     </Layout>
   );
 }
