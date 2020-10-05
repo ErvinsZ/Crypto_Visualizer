@@ -19,7 +19,8 @@ export class StateManager extends React.Component {
             removeCoin: this.removeCoin,
             alreadyInFavorites: this.alreadyInFavorites,
             confirmFavourites: this.confirmFavourites,
-            setFilteredCoins: this.setFilteredCoins
+            setFilteredCoins: this.setFilteredCoins,
+            setCurrentFavorite: this.setCurrentFavorite,
 
 
         }
@@ -70,14 +71,27 @@ export class StateManager extends React.Component {
         return returnData
     }
     confirmFavourites = () => {
+        let currentFavorite = this.state.favorites[0]
         this.setState({
             firstVisit:false,
-            page: 'Dashboard'
+            page: 'Dashboard',
+            currentFavorite,
         }, () => {
             this.fetchPrices()
         })
         localStorage.setItem('cryptoVis', JSON.stringify({
-            favorites: this.state.favorites
+            favorites: this.state.favorites,
+            currentFavorite
+        }))
+    }
+
+    setCurrentFavorite = (symbol) => {
+        this.setState({
+            currentFavorite: symbol
+        })
+        localStorage.setItem('cryptoVis', JSON.stringify({
+            ...JSON.parse(localStorage.getItem('cryptoVis')),
+            currentFavorite: symbol
         }))
     }
 
@@ -86,8 +100,8 @@ export class StateManager extends React.Component {
         if(!cryptoVisData){
             return{page:'Settings', firstVisit:true}
         }
-        let {favorites} = cryptoVisData
-        return {favorites}
+        let {favorites,currentFavorite} = cryptoVisData
+        return {favorites, currentFavorite}
     }
     setPage = page => this.setState({page})
 
