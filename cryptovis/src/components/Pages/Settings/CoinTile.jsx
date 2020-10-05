@@ -1,8 +1,8 @@
 import React from 'react'
-import {Context} from '../../StateManager'
+import {Context} from '../../../StateManager'
 import {SelectTile, DeleteTile, DisableTile} from './SelectTile'
-import CoinHeaderGrid from '../Grid/CoinHeaderGrid'
-import CoinImage from '../CoinImage'
+import CoinHeaderGrid from './CoinHeaderGrid'
+import CoinImage from '../../CoinImage'
 
 function clickCoin(favoriteSection, coinKey, addCoin, removeCoin){
     return favoriteSection ? () => {

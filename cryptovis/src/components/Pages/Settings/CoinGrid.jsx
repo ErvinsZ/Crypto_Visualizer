@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, {css} from 'styled-components'
-import {Context} from '../../StateManager'
-import CoinTile from '../Tile/CoinTile'
+import {Context} from '../../../StateManager'
+import CoinTile from './CoinTile'
 
 export const CoinGrid = styled.div`
 display: grid;
@@ -21,7 +21,7 @@ export default function({favoriteSection}) {
     return <Context.Consumer>
         {({coinList, favorites, filteredCoins}) => <CoinGrid>
             {displayCoins(coinList, favoriteSection, favorites, filteredCoins).map(coinKey =>
-                <CoinTile favoriteSection={favoriteSection} coinKey={coinKey}/>
+                <CoinTile key={coinKey} favoriteSection={favoriteSection} coinKey={coinKey}/>
                 )}
             </CoinGrid>}
     </Context.Consumer>

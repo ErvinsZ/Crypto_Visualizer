@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {DeleteTile} from '../Tile/SelectTile'
+import {DeleteTile} from './SelectTile'
 
 export const CoinHeaderGrid = styled.div`
 display: grid;

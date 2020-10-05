@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {subtleBoxShadow, purpleBackground, neonBoxShadow, redBoxShadow} from '../Styles'
+import {subtleBoxShadow, purpleBackground, neonBoxShadow, redBoxShadow} from '../../Styles'
 
 export const Tile = styled.div`
 ${subtleBoxShadow};

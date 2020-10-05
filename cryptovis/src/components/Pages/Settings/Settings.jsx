@@ -1,9 +1,9 @@
 import React from 'react'
-import ConfirmButton from './ConfirmButton'
-import Welcome from './Welcome'
-import PageWrapper from './PageWrapper'
-import CoinGrid from './Grid/CoinGrid'
-import Search from './Search'
+import ConfirmButton from '../../ConfirmButton'
+import Welcome from '../../Welcome'
+import PageWrapper from '../../PageWrapper'
+import CoinGrid from './CoinGrid'
+import Search from '../../Search'
 
 export default function() {
     return <PageWrapper name="Settings">

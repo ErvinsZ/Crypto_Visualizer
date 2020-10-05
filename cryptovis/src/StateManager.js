@@ -42,18 +42,19 @@ export class StateManager extends React.Component {
 
     componentDidMount = () => {
         this.fetchCoins()
+        this.fetchPrices()
     }
 
     fetchCoins = async () => {
         let coinList = (await cc.coinList()).Data
-        console.log(coinList.Data)
         this.setState({coinList})
     }
 
     fetchPrices = async() =>{
+        if(this.state.firstVisit) return
         let prices = await this.prices()
-        console.log(prices)
-        this.setState({prices})
+        prices = prices.filter(price => Object.keys(price).length);
+        this.setState({prices});
     }
 
     prices = async() =>{
