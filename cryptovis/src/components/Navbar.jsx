@@ -16,15 +16,19 @@ cursor: pointer;
 ${props=>props.active && css`
     text-shadow: 0px 0px 10px green
 `}
+${props => props.hidden && css`
+display: none;
+`}
 `
 
 function ControlButton({name}){
     return (
     <Context.Consumer>
-        {({page, setPage}) => (
+        {({firstVisit, page, setPage}) => (
         <ControlButtonElement 
             active={page === name}
             onClick={()=> setPage(name)}
+            hidden={firstVisit && name === 'Dashboard'}
             >
             {name}
         </ControlButtonElement>
