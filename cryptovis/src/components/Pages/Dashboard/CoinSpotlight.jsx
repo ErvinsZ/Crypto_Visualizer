@@ -8,9 +8,14 @@ import styled from 'styled-components'
 const SpotlightName = styled.h2`
 text-align:center;
 `
-
+const Wrapper = styled.div`
+@media (max-width: 480px) {
+    display:none
+  }
+`
 export default function(){
     return (
+        <Wrapper>
         <Context.Consumer>
             {({currentFavorite, coinList}) => 
         <Tile>
@@ -19,5 +24,6 @@ export default function(){
         </Tile>
          }
         </Context.Consumer>
+        </Wrapper>
     )
 }

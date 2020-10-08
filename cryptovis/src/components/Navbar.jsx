@@ -4,12 +4,18 @@ import {Context} from '../StateManager'
 
 const Logo = styled.div`
  font-size: 1.5em;
+ @media (max-width: 480px) {
+    margin-bottom:25px
+  }
 `
 
 const Navbar = styled.div`
 display: grid;
 margin-bottom:40px;
 grid-template-columns: 180px auto 100px 100px;
+@media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `
 const ControlButtonElement = styled.div`
 cursor: pointer;

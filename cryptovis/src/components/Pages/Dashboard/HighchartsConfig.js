@@ -34,10 +34,11 @@ export default function(historical) {
                 maxWidth: 500
               },
               chartOptions: {
+                
                 legend: {
                   layout: 'horizontal',
                   align: 'center',
-                  verticalAlign: 'bottom'
+                  verticalAlign: 'bottom',
                 }
               }
             }]

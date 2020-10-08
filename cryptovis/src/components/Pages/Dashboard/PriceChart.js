@@ -4,11 +4,19 @@ import {Tile} from '../Settings/SelectTile'
 import {Context} from '../../../StateManager'
 import ReactHighcharts from 'react-highcharts'
 import HighChartsTheme from './HighchartsTheme'
+import styled from "styled-components"
 
 ReactHighcharts.Highcharts.setOptions(HighChartsTheme)
 
+const PriceChartResponive = styled.div`
+@media (max-width: 480px) {
+    width:300px;
+  }
+`
+
 export default function(){
     return (
+        <PriceChartResponive>
         <Context.Consumer>
             {({historical}) => 
             <Tile>
@@ -18,5 +26,6 @@ export default function(){
             </Tile>
             }
         </Context.Consumer>
+        </PriceChartResponive>
     ) 
 }

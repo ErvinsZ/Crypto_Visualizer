@@ -12,12 +12,15 @@ grid-gap;
 grid-template-columns: 1fr 3fr;
 `
 
+
 export default function() {
     return <PageWrapper name="Dashboard">
         <PriceGrid/>
         <ChartGrid>
         <CoinSpotlight/>
-        <PriceChart>Chart goes here</PriceChart>
+        
+            <PriceChart/>
+
         </ChartGrid>
        </PageWrapper>
     

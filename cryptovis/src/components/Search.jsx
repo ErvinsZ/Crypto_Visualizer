@@ -8,6 +8,9 @@ import fuzzy from 'fuzzy'
 const SearchGrid = styled.div`
     display: grid;
     grid-template-columns: 200px 1fr;
+    @media (max-width: 480px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
 `
 
 const SearchInput = styled.input`
