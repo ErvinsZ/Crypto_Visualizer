@@ -1,6 +1,6 @@
 import highchartsConfig from './HighchartsConfig'
 import React from 'react'
-import {Tile} from '../Settings/SelectTile'
+import {PriceChartTile} from '../Settings/SelectTile'
 import {Context} from '../../../StateManager'
 import ReactHighcharts from 'react-highcharts'
 import HighChartsTheme from './HighchartsTheme'
@@ -11,11 +11,11 @@ export default function(){
     return (
         <Context.Consumer>
             {({historical}) => 
-            <Tile>
+            <PriceChartTile>
                {historical ? <ReactHighcharts config={highchartsConfig(historical)}/>
                 : <div>Loading data</div>
                 }
-            </Tile>
+            </PriceChartTile>
             }
         </Context.Consumer>
     ) 

@@ -16,6 +16,15 @@ padding: 10px;
   }
 `
 
+export const PriceChartTile = styled.div`
+${subtleBoxShadow};
+${purpleBackground};
+padding: 10px;
+@media (max-width: 480px) {
+    width:340px
+  }
+`
+
 export const SelectTile = styled(Tile)`
 &:hover {
     cursor: pointer;
