@@ -18,9 +18,7 @@ export default function() {
         <PriceGrid/>
         <ChartGrid>
         <CoinSpotlight/>
-        
-            <PriceChart/>
-
+        <PriceChart/>
         </ChartGrid>
        </PageWrapper>
     

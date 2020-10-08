@@ -7,6 +7,14 @@ ${subtleBoxShadow};
 ${purpleBackground};
 padding: 10px;
 `
+export const CoinSpotlightTile = styled.div`
+${subtleBoxShadow};
+${purpleBackground};
+padding: 10px;
+@media (max-width: 480px) {
+    display:none;
+  }
+`
 
 export const SelectTile = styled(Tile)`
 &:hover {
