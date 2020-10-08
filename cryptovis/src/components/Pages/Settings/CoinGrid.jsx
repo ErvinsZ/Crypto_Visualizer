@@ -10,6 +10,7 @@ grid-gap: 15px;
 margin-top: 40px;
 @media (max-width: 480px) {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(minmax(200px, 1fr));
   }
 `
 function getSearchedCoins(coinList, filteredCoins){
