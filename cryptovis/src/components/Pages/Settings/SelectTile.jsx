@@ -5,6 +5,9 @@ import {subtleBoxShadow, purpleBackground, neonBoxShadow, redBoxShadow} from '..
 export const Tile = styled.div`
 ${subtleBoxShadow};
 ${purpleBackground};
+background-image: linear-gradient(to right, #4c284e , #af8fb1);
+background-repeat: no-repeat;
+background-size:100% 36px;
 padding: 10px;
 border-radius:10px;
 `

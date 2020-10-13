@@ -9,7 +9,11 @@ import {Context} from '../../../StateManager'
 const JustifyRight = styled.div`
 justify-self:right;
 `
-
+const Hr = styled.hr`
+background-color: transperant;
+height:2px;
+border:none
+`
 const JustifyLeft = styled.div`
 justify-self:left`
 
@@ -17,9 +21,9 @@ const TickerPrice = styled.div`
 ${fontSizeBig}
 `
 const ChangePct = styled.div`
-color:green;
+color:#4ee64e;
 ${props => props.red && css`
-color:#cc4e4e;
+color:#940000;
 `}
 `
 const numberFormat = number => {
@@ -57,6 +61,7 @@ function PriceTile({symbol, data, currentFavorite, setCurrentFavorite}){
                 <div>{symbol}</div>
             <ChangePercent data={data}/>   
             </CoinHeaderGrid>
+            <Hr></Hr>
             <TickerPrice>
                 ${numberFormat(data.PRICE)}
             </TickerPrice>
@@ -68,7 +73,7 @@ function PriceTileCompact({symbol, data, currentFavorite, setCurrentFavorite}){
     return(
         <PriceTileStyled onClick={setCurrentFavorite} compact currentFavorite={currentFavorite}> 
                 <JustifyLeft>{symbol}</JustifyLeft>
-            <ChangePercent data={data}/>   
+            <ChangePercent data={data}/> 
             <div>
                 ${numberFormat(data.PRICE)}
             </div>

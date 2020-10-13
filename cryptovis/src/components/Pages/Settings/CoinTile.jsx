@@ -6,7 +6,7 @@ import CoinImage from '../../CoinImage'
 import styled from 'styled-components'
 
 const Hr = styled.hr`
-background-color: #655698;
+background-color: transperant;
 height:2px;
 border:none
 

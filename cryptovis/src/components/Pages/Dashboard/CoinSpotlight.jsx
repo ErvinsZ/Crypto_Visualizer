@@ -8,7 +8,8 @@ import styled from 'styled-components'
 const SpotlightName = styled.h2`
 text-align:center;
 font-size: 35px;
-margin-bottom: 4vh
+margin-bottom: 4vh;
+
 `
 
 export default function(){

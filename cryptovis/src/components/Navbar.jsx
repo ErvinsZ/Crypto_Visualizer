@@ -24,8 +24,8 @@ font-size: 1.5em;
 margin-top:40px;
 
 ${props=>props.active && css`
-    text-shadow: 3px 3px 1px #966be0;
     text-decoration: underline #76688E;
+    color:#AE99BF
 `}
 ${props => props.hidden && css`
 display: none;

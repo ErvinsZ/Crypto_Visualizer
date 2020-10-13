@@ -8,6 +8,7 @@ display:grid;
 grid-template-columns: repeat(5, 1fr);
 grid-gap: 15px;
 margin-top: 40px;
+
 @media (max-width: 480px) {
     grid-template-columns: repeat(2, 1fr);
   }
