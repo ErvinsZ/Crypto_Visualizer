@@ -17,7 +17,7 @@ export const greenBackgroundColor = `background-color: ${color3};`;
 
 export const fontColorGreen = `color: #03A9F4`;
 export const fontColorWhite = `color: white`;
-export const subtleBoxShadow = `box-shadow: 0px 0px 5px 3px ${lightTheme ? '#a9b6ff' : '#46464a'}`;
+export const subtleBoxShadow = `box-shadow: 1px 2px 7px 0px ${lightTheme ? '#a9b6ff' : '#000000'}`;
 export const neonBoxShadow = `box-shadow: 0px 0px 4px 2px #de9f7a`;
 export const redBoxShadow = `box-shadow: 0px 0px 2px 2px #e41111`;
 
