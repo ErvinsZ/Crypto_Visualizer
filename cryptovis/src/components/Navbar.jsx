@@ -2,8 +2,8 @@ import React from 'react'
 import styled, {css} from 'styled-components'
 import {Context} from '../StateManager'
 
-const Logo = styled.div`
- font-size: 1.5em;
+const Logo = styled.h1`
+ font-size: 2.5em;
  @media (max-width: 480px) {
     margin-bottom:25px
   }
@@ -12,15 +12,18 @@ const Logo = styled.div`
 const Navbar = styled.div`
 display: grid;
 margin-bottom:40px;
-grid-template-columns: 180px auto 100px 100px;
+grid-template-columns: 100px auto 250px 100px;
 @media (max-width: 480px) {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 240px 100px;
   }
 `
-const ControlButtonElement = styled.div`
+const ControlButtonElement = styled.h2`
 cursor: pointer;
+font-size: 1.5em;
+margin-top:40px;
 ${props=>props.active && css`
-    text-shadow: 3px 3px 1px #966be0
+    text-shadow: 3px 3px 1px #966be0;
 `}
 ${props => props.hidden && css`
 display: none;
