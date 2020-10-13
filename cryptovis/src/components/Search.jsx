@@ -16,10 +16,13 @@ const SearchGrid = styled.div`
 const SearchInput = styled.input`
 ${backgroundColor2};
 ${fontSize2};
-${subtleBoxShadow};
 outline: none;
+background: transparent;
+border:none;
+border-bottom: #76688E solid;
 color:#FFEFDB;
-height: 25px;
+height: 30px;
+width: 300px;
 place-self: center left
 `
 
@@ -51,8 +54,8 @@ export default function () {
     <Context.Consumer>
         {({setFilteredCoins, coinList}) =>
         <SearchGrid>
-            <h2>Search coins</h2>
-            <SearchInput onKeyUp={(e) => filterCoins(e, setFilteredCoins, coinList)}/>
+            <h2 style={{fontSize:"1.75em"}}>Search coins</h2>
+            <SearchInput placeholder="Insert coin name here" onKeyUp={(e) => filterCoins(e, setFilteredCoins, coinList)}/>
         </SearchGrid>
         }
     </Context.Consumer>
