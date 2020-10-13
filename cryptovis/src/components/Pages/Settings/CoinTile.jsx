@@ -3,6 +3,14 @@ import {Context} from '../../../StateManager'
 import {SelectTile, DeleteTile, DisableTile} from './SelectTile'
 import CoinHeaderGrid from './CoinHeaderGrid'
 import CoinImage from '../../CoinImage'
+import styled from 'styled-components'
+
+const Hr = styled.hr`
+background-color: #655698;
+height:2px;
+border:none
+
+`
 
 function clickCoin(favoriteSection, coinKey, addCoin, removeCoin){
     return favoriteSection ? () => {
@@ -25,7 +33,8 @@ export default function({coinKey, favoriteSection}) {
             }
 
             return <TileClass onClick={clickCoin(favoriteSection, coinKey, addCoin, removeCoin)}>
-                <CoinHeaderGrid favoriteSection={favoriteSection} name={coin.CoinName} symbol={coin.Symbol}/>
+                <CoinHeaderGrid  favoriteSection={favoriteSection} name={coin.CoinName} symbol={coin.Symbol}/>
+                <Hr></Hr>
                 <CoinImage coin={coin}/>
             </TileClass>
         }}

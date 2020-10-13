@@ -5,8 +5,8 @@ import CoinTile from './CoinTile'
 
 export const CoinGrid = styled.div`
 display: grid;
-grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-grid-gap: 15px;
+grid-template-columns: repeat(5, minmax(150px, 1fr));
+grid-gap: 25px;
 margin-top: 40px;
 @media (max-width: 480px) {
     grid-template-columns: repeat(2, 1fr);

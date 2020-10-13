@@ -20,7 +20,7 @@ grid-template-columns: 180px auto 100px 100px;
 const ControlButtonElement = styled.div`
 cursor: pointer;
 ${props=>props.active && css`
-    text-shadow: 0px 0px 10px green
+    text-shadow: 3px 3px 1px #966be0
 `}
 ${props => props.hidden && css`
 display: none;
