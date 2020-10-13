@@ -6,7 +6,7 @@ export default function ({firstVisit}){
         <Context.Consumer>
             {({firstVisit}) => 
             firstVisit ? <div>
-                Favourite Coin List.{''}
+                Chosen Coin List.{''}
             </div> : null
             }   
         </Context.Consumer>
