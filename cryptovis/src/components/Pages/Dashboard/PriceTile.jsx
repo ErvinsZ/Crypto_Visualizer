@@ -8,6 +8,7 @@ import {Context} from '../../../StateManager'
 
 const JustifyRight = styled.div`
 justify-self:right;
+font-size:1.15em;
 `
 const Hr = styled.hr`
 background-color: transperant;
@@ -18,7 +19,8 @@ const JustifyLeft = styled.div`
 justify-self:left`
 
 const TickerPrice = styled.div`
-${fontSizeBig}
+${fontSizeBig};
+
 `
 const ChangePct = styled.div`
 color:#4ee64e;

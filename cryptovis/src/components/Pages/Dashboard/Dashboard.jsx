@@ -8,7 +8,7 @@ import PriceChart from './PriceChart'
 const ChartGrid = styled.div`
 display:grid;
 margin-top:20px;
-grid-template-columns: 1fr 3fr;
+grid-template-columns: 1fr 4fr;
 
 `
 

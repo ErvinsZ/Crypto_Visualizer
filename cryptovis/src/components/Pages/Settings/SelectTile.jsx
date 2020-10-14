@@ -43,7 +43,9 @@ export const SelectTile = styled(Tile)`
 export const DeleteTile = styled(SelectTile)`
 &:hover{
     cursor: pointer;
+    filter: blur(1.5px);
     border-radius:10px;
+    backround-color:red;
     ${redBoxShadow}
 }
 `

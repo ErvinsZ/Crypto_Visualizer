@@ -5,13 +5,16 @@ import { color3, fontSize1, neonBoxShadow } from './Styles'
 
 const ConfirmButton = styled.button`
     margin: 20px;
-    color: ${color3};
+    color: white;
     ${fontSize1};
     padding: 5px;
     font-weight: 600;
-    background: transparent;
+    background: #4F2B51;
     outline:none;
-    border: solid #de9f7a;
+    width:80%;
+    outline:none;
+    border:none;
+    box-shadow: 1px 2px 7px 0px black;
     border-radius: 15px;
     cursor: pointer;
     &:hover {
@@ -22,16 +25,17 @@ const ConfirmButton = styled.button`
 export const CenterDiv = styled.div`
     display: grid;
     justify-content: center;
+    align-items: end;
 `
 export default function() {
     return (
         <Context.Consumer>
             {({confirmFavourites}) => 
-            <CenterDiv>
+            
                 <ConfirmButton onClick={confirmFavourites}>
-                    Confirm Coins
+                    Confirm
                 </ConfirmButton>
-            </CenterDiv>
+          
             }
         </Context.Consumer>
     )

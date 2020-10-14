@@ -8,7 +8,7 @@ border-radius: 50%;
 background-color: white;
 box-shadow: 1px 2px 7px 0px black;
 ${props => props.spotlight && css`
-height: 300px;
+height: 250px;
 margin: auto;
 display: block;
 border-radius: 50%;
