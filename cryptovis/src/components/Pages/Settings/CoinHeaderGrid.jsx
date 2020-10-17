@@ -21,8 +21,9 @@ ${DeleteTile}:hover & {
 `
 
 export default function({name, symbol, favoriteSection}){
+    const str = name.slice(-15)
     return <CoinHeaderGrid>
-        <div>{name}</div>
+        <div>{str}</div>
         {favoriteSection ? (
         <DeleteIcon>X</DeleteIcon>
         ) : (<CoinSymbol>{symbol}</CoinSymbol>)
