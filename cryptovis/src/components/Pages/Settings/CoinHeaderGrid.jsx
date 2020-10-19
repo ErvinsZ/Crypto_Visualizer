@@ -21,7 +21,7 @@ ${DeleteTile}:hover & {
 `
 
 export default function({name, symbol, favoriteSection}){
-    const str = name.slice(-15)
+    const str = name.split(' ', 2)
     return <CoinHeaderGrid>
         <div>{str}</div>
         {favoriteSection ? (
