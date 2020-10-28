@@ -31,7 +31,7 @@ place-self: center left
 
 `
 
-const handleFilter = _.debounce((inputValue, coinList, setFilterCoins) => {
+const  handleFilter = _.debounce((inputValue, coinList, setFilterCoins) => {
     let coinSymbols = Object.keys(coinList)
     let coinNames = coinSymbols.map(symbol => coinList[symbol].CoinName)
     let allStringsToSearch = coinSymbols.concat(coinNames)
