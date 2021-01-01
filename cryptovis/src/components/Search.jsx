@@ -26,7 +26,7 @@ border:none;
 border-bottom: #76688E solid;
 color:#FFEFDB;
 height: 30px;
-width: 300px;
+width: 295px;
 place-self: center left
 
 `
