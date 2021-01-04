@@ -35,6 +35,7 @@ export default function({coinKey, favoriteSection}) {
             return <TileClass onClick={clickCoin(favoriteSection, coinKey, addCoin, removeCoin)}>
                 <CoinHeaderGrid  favoriteSection={favoriteSection} name={coin.CoinName} symbol={coin.Symbol}/>
                 <Hr></Hr>
+                
                 <CoinImage coin={coin}/>
             </TileClass>
         }}
