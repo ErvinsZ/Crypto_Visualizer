@@ -15,7 +15,7 @@ margin-top: 40px;
 `
 function getSearchedCoins(coinList, filteredCoins){
     return filteredCoins && Object.keys(filteredCoins) ||
-        Object.keys(coinList).slice(0,100)
+        Object.keys(coinList).slice(0,50)
 
 }
 function displayCoins(coinList, favoriteSection, favorites, filterCoins){
