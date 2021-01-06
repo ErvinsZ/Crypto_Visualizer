@@ -11,7 +11,7 @@ const ConfirmButton = styled.button`
     font-weight: 600;
     background: #4F2B51;
     outline:none;
-    width:80%;
+    width:100px;
     outline:none;
     border:none;
     box-shadow: 1px 2px 7px 0px black;

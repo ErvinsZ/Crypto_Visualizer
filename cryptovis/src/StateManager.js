@@ -15,7 +15,7 @@ export class StateManager extends React.Component {
         super(props);
         this.state = {
             page: 'Dashboard',
-            favorites: ['BTC', 'ETH', 'LTC'],
+            favorites: ['BTC', 'ETH', 'LTC','XRP'],
             timeInterval: "months",
             ...this.savedSettings(),
             setPage: this.setPage,
